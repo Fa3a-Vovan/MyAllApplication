@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 result.setText(logic.howManyRootsOfExpression(entity));
             }
         };
+
         button.setOnClickListener(listener);
     }
 }
