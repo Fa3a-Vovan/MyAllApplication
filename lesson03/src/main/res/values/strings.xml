@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">My Application</string>
+    <string name="app_task">Приложение решает квадратное уравнение. Введите коэффициенты, как показано в примере ниже</string>
+    <string name="buttonName">Нажмите после ввода коэффициентов</string>
+    <string name="string_name">Нажмите после ввода коэффициентов</string>
+    <string name="result" tools:ignore="ExtraTranslation">Здесь будет результат</string>
+
+</resources>

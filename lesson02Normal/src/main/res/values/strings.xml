@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Квадратные уравнения (нормальный вид)</string>
+    <string name="task_name">Эта программа решения квадратного уравнения</string>
+    <string name="result">здесь будет решение</string>
+    <string name="b_buton_name">Нажмите после ввода коэфициентов</string>
+</resources>

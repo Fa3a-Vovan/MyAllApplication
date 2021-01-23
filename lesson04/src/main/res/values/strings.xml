@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Сортировка</string>
+    <string name="target_app">Приложение сортирует введенные элементы,\nn - число элементов, далее элементы</string>
+    <string name="EditText_hint">n=5 (1,3,2,7,-2)</string>
+    <string name="button_text">Нажмите после ввода</string>
+    <string name="tv_result">Здесь будет результат</string>
+</resources>

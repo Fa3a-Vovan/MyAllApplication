@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">работа About</string>
+    <string name="my_text">
+        у лукоморья дуб зеленый;\n
+        златая цепь на дубе том:\n
+        И днём и ночью <b>кот ученый</b>\n
+        Все ходит по цепи кругом;\n
+        Идёт <b>Направо</b> - песнь заводит,\n
+        <b>Налево</b> - сказку говорит.</string>
+    <string name="about_title">О программе</string>
+</resources>

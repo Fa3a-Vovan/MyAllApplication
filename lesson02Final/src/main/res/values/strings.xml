@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Квадратные уравнения</string>
+    <string name="task_app">Это программа решения квадратного уравнения. Введите коэффициенты, как показано ниже</string>
+    <string name="button_text">Нажмите после ввода данных</string>
+    <string name="result">Тут вы увидите результат</string>
+    <string name="button">Нажмите после ввода данных</string>
+    <string name="et_example_text">a=1, b=2, c=3</string>
+</resources>
