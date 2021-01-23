@@ -3,13 +3,13 @@ package com.example.lesson04;
 import java.util.Arrays;
 
 public class Logic {
-    public int[] arraySort(int[] array) {
+    public double[] arraySort(double[] array) {
         Arrays.sort(array);
         return array;
     }
 
-    public String result(String s, int[] a) {
-        return s.concat(Arrays.toString(a).replaceAll("\\[", " (").replace(']', ')'));
+    public String result(String s, double[] a) {
+        return String.format("%s (%s)", s, Arrays.toString(a).replaceAll("^\\[|\\]$", ""));
 
     }
 }

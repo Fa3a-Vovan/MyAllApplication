@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     strings = transform.stringSeparator(String.valueOf(editText.getText()));
                 } catch (IndexOutOfBoundsException e) {
-                    e.printStackTrace();
+                    result.setText(e.getMessage());
                 }
                 try {
-                    result.setText(logic.result(strings[0], logic.arraySort(transform.array(strings[1]))));
+                    result.setText(logic.result(strings[0], logic.arraySort(transform.stringToDoubleArray(strings[1]))));
                 } catch (ArithmeticException e) {
-                    e.printStackTrace();
+                    result.setText(e.getMessage());
+                } catch (NumberFormatException e) {
+                    result.setText(e.getMessage());
                 }
 
             }
