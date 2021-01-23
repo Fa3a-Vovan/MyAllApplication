@@ -1,0 +1,7 @@
+include ':lesson04'
+include ':lesson00About'
+include ':lesson03'
+include ':lesson02Normal'
+include ':lesson02Final'
+include ':lesson02'
+rootProject.name = "My Application"
