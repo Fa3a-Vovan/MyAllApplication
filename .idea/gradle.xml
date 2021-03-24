@@ -11,12 +11,23 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/lesson00About" />
-            <option value="$PROJECT_DIR$/lesson02" />
+            <option value="$PROJECT_DIR$/lesson00_IntentAbout" />
             <option value="$PROJECT_DIR$/lesson02Final" />
             <option value="$PROJECT_DIR$/lesson02Normal" />
-            <option value="$PROJECT_DIR$/lesson03" />
-            <option value="$PROJECT_DIR$/lesson04" />
+            <option value="$PROJECT_DIR$/lesson03Activity" />
+            <option value="$PROJECT_DIR$/lesson04Ekran" />
+            <option value="$PROJECT_DIR$/lesson05Resouce" />
+            <option value="$PROJECT_DIR$/lesson06KrestNol" />
+            <option value="$PROJECT_DIR$/lesson06_KrestikiNoliki" />
+            <option value="$PROJECT_DIR$/lesson07Menu" />
+            <option value="$PROJECT_DIR$/lesson07_08KR" />
+            <option value="$PROJECT_DIR$/lesson08ContextMenu" />
+            <option value="$PROJECT_DIR$/lesson09Page10" />
+            <option value="$PROJECT_DIR$/lesson09TemStyle" />
+            <option value="$PROJECT_DIR$/lesson10AnimMove" />
+            <option value="$PROJECT_DIR$/lesson10Saper" />
+            <option value="$PROJECT_DIR$/lesson11LifeCicle" />
+            <option value="$PROJECT_DIR$/lesson12Activity_AS" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
