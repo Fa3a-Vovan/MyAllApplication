@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/de_mine32"
+        android:title="Разминировать">
+    </item>
+    <item
+        android:id="@+id/flag32"
+        android:title="Поставить флажок">
+    </item>
+    <item
+        android:id="@+id/unFlag32"
+        android:title="снять флажок">
+
+    </item>
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/file1"
+        android:title="file2_1">
+        <menu>
+            <item
+                android:id="@+id/vibor1"
+                android:title="vibor_2_1" />
+            <item
+                android:id="@+id/vihod1"
+                android:title="vihod_2_1" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/file2"
+        android:title="file2_1">
+        <menu>
+            <item
+                android:id="@+id/vibor2"
+                android:title="vibor_2_2" />
+            <item
+                android:id="@+id/vihod2"
+                android:title="vihod_2_2" />
+        </menu>
+    </item>
+</menu>

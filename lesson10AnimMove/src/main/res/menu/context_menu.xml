@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/alpha1"
+        android:title="Прозрачность">
+
+    </item>
+    <item
+        android:id="@+id/rotate1"
+        android:title="Поворот">
+
+    </item>
+    <item
+        android:id="@+id/scale1"
+        android:title="Изменить размер">
+
+    </item>
+    <item
+        android:id="@+id/translate1"
+        android:title="Движение">
+
+    </item>
+
+</menu>

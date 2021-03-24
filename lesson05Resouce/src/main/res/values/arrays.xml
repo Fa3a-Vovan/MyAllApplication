@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="massivSsilok">
+        <item>@string/b1</item>
+        <item>@string/b2</item>
+    </array>
+    <string-array name="string">
+        <item>AAAAAAAAAAAA</item>
+        <item>BBBBBBBBBBBB</item>
+        <item>CCCCCCCCCCCC</item>
+    </string-array>
+
+    <integer-array name="integer">
+        <item>1111</item>
+        <item>2222</item>
+        <item>3333</item>
+    </integer-array>
+
+    <item name="canThis" type="integer">3333</item>
+
+</resources>

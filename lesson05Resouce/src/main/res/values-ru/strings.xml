@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Мое Приложение</string>
+    <string name="hello_world" translatable="false">Привет Мир!</string>
+
+    <bool name="a1">true</bool>
+    <integer name="a2">42</integer>
+    <string name="a3" translatable="false">Hi!</string>
+</resources>

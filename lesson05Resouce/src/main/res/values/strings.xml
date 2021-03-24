@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="red">#f00</color>
+    <color name="yellow">#ffff00</color>
+    <color name="green">#FF00FF00</color>
+
+    <string name="app_name">My Application</string>
+    <string name="hello_world">Hello world!</string>
+
+    <bool name="a1">true</bool>
+    <integer name="a2">42</integer>
+    <string name="a3">Hi! </string>
+
+    <string name="b1" translatable="false">b1 </string>
+    <string name="b2" translatable="false">\"Строка в кавычках\"</string>
+    <string name="b3" translatable="false">a= %2$s. b= %1$s</string>
+    <string name="b4" translatable="false"><b>html</b> - <i>строка и теги </i>&amp; &lt; &#160; конец</string>
+    <string name="action_settings1" translatable="false">значение меню</string>
+
+</resources>

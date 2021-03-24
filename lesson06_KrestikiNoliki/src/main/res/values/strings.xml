@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="purpose_app">Это приложение-игра \"крестики-нолики\"</string>
+    <string name="result">Тут будет результат игры</string>
+</resources>

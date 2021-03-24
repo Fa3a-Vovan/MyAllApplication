@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/first"
+        android:title="Играть против ИИ" />
+    <item
+        android:id="@+id/second"
+        android:title="Игра с дургом" />
+    <item
+        android:id="@+id/third"
+        android:title="Начать заново" />
+    <item
+        android:id="@+id/fourth"
+        android:title="Выход" />
+    <item
+        android:id="@+id/item1"
+        android:title="item1"/>
+    <item android:id="@+id/it6"
+        android:title="6"/>
+    <item android:id="@+id/it7"
+android:title="7"/>
+</menu>
