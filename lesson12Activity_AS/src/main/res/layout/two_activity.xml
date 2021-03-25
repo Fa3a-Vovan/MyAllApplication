@@ -4,23 +4,31 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView2" />
+        android:text="Второй текст" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text2"
-        android:text="editText2" />
+        android:layout_below="@+id/text"
+        android:text="Второй edit" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:text="Main Activity" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:text="button" />
+        android:layout_below="@+id/editText"
+        android:layout_marginLeft="210dp"
+        android:text="One Activity" />
 
 </RelativeLayout>
