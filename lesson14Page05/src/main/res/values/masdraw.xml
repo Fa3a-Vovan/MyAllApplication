@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icon">
+        <item>@drawable/i2_bubi</item>
+        <item>@drawable/i2_chervi</item>
+        <item>@drawable/i2_piki</item>
+        <item>@drawable/i2_trefy</item>
+
+        <item>@drawable/i3_bubi</item>
+        <item>@drawable/i3_chervi</item>
+        <item>@drawable/i3_piki</item>
+        <item>@drawable/i3_trefy</item>
+
+        <item>@drawable/i4_bubi</item>
+        <item>@drawable/i4_chervi</item>
+        <item>@drawable/i4_piki</item>
+        <item>@drawable/i4_trefy</item>
+
+        <item>@drawable/i5_bubi</item>
+        <item>@drawable/i5_chervi</item>
+        <item>@drawable/i5_piki</item>
+        <item>@drawable/i5_trefy</item>
+
+        <item>@drawable/i6_bubi</item>
+        <item>@drawable/i6_chervi</item>
+        <item>@drawable/i6_piki</item>
+        <item>@drawable/i6_trefy</item>
+
+        <item>@drawable/i7_bubi</item>
+        <item>@drawable/i7_chervi</item>
+        <item>@drawable/i7_piki</item>
+        <item>@drawable/i7_trefy</item>
+
+        <item>@drawable/i8_bubi</item>
+        <item>@drawable/i8_chervi</item>
+        <item>@drawable/i8_piki</item>
+        <item>@drawable/i8_trefy</item>
+
+        <item>@drawable/i9_bubi</item>
+        <item>@drawable/i9_chervi</item>
+        <item>@drawable/i9_piki</item>
+        <item>@drawable/i9_trefy</item>
+
+        <item>@drawable/i10_bubi</item>
+        <item>@drawable/i10_chervi</item>
+        <item>@drawable/i10_piki</item>
+        <item>@drawable/i10_trefy</item>
+
+        <item>@drawable/valet_bubi</item>
+        <item>@drawable/valet_chervi</item>
+        <item>@drawable/valet_piki</item>
+        <item>@drawable/valet_trefy</item>
+
+        <item>@drawable/dama_bubi</item>
+        <item>@drawable/dama_chervi</item>
+        <item>@drawable/dama_piki</item>
+        <item>@drawable/dama_trefy</item>
+
+        <item>@drawable/korol_bubi</item>
+        <item>@drawable/korol_chervi</item>
+        <item>@drawable/korol_piki</item>
+        <item>@drawable/korol_trefy</item>
+
+        <item>@drawable/tuz_bubi</item>
+        <item>@drawable/tuz_chervi</item>
+        <item>@drawable/tuz_piki</item>
+        <item>@drawable/tuz_trefy</item>
+    </array>
+</resources>

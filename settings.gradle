@@ -1,3 +1,8 @@
+include ':lesson16WorkFileSD'
+include ':lesson15WorkFile2'
+include ':lesson15WorkFile'
+include ':lesson14Page05'
+include ':lesson14AddElFromJava'
 include ':lesson13FrameByFrame'
 include ':lesson12Activity_AS'
 include ':lesson11LifeCicle'
