@@ -165,8 +165,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d(TAG, "SD-карта не доступна");
             return;
         }
-        File sdPath = Environment.getExternalStorageDirectory();
-        File [] sdFiles = sdPath.listFiles();
-        Log.d(TAG, Arrays.toString(sdFiles) +"");
+        File sdPath = new File(String.valueOf(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)));
+        recursiveDelete(sdPath);
+        Log.d(TAG,  "All directories have been deleted " + sdPath);
+    }
+    void recursiveDelete(File fileDirectory) {
+        if (fileDirectory.isDirectory()){
+            for (File child : fileDirectory.listFiles()){
+                recursiveDelete(child);
+                child.delete();
+                Log.d(TAG, "file del " + child);
+            }
+            fileDirectory.delete();
+        }
     }
 }
