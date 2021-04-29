@@ -43,7 +43,8 @@ public class HelperMethodClass {
         contentValues = new ContentValues();
         contentValues.put("_razdel", dataRazdel);
         Log.d(TAG, "Nomer zapisi = " + database.insert(nameTable, null, contentValues));
-        cursor.close();     dbHelper.close();       database.close();
+//        cursor.close();
+        dbHelper.close();       database.close();
     }
     @SuppressLint("WrongConstant")
     String onReadDataFromFieldTable(Context context, String nameDB, String nameTableDB, String nameField) {
@@ -56,11 +57,9 @@ public class HelperMethodClass {
         //////////---Открываем БД для считываения данных из таблицы---///////
         dbHelper = new DBHelper(context, nameDB, null, version, null);
         try {
-            database = dbHelper.getWritableDatabase();
-            Log.d(TAG, "writeDB");
+            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
         } catch (SQLException e) {
-            database = dbHelper.getReadableDatabase();
-            Log.d(TAG, "readDB");
+            database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB");
         }
         ///////---Читанем данные из поля таблицы---/////////
         String str = "";
