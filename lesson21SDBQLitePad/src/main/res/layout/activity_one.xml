@@ -28,24 +28,25 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Cодержание"
+                android:text="Пункт"
                 android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Тут будет содержимое"
+                android:text="Тут будет содержание"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Выбранный раздел"
+                android:text="Выбранный пункт"
                 android:textColor="#00ffff" />
 
             <Button
@@ -53,27 +54,27 @@
                 style="@style/ForButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Перебор разделов содержания" />
+                android:text="Перебор пунктов содержания" />
 
             <Button
                 android:id="@+id/button2"
                 style="@style/ForButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Выбрать раздел содержания" />
+                android:text="Выбрать пункт содержания" />
 
             <Button
                 android:id="@+id/button3"
                 style="@style/ForButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Удалить раздел содержания" />
+                android:text="Удалить пункт содержания" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Добавить раздел к содержанию"
+                android:text="Добавить пункт к разделу"
                 android:textSize="22sp" />
 
             <EditText
@@ -81,14 +82,14 @@
                 style="@style/ForText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Сюда впишите новый раздел" />
+                android:hint="Сюда впишите новый пункт" />
 
             <Button
                 android:id="@+id/button4"
                 style="@style/ForButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Добавить раздел в содержание" />
+                android:text="Добавить пункт в содержание" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

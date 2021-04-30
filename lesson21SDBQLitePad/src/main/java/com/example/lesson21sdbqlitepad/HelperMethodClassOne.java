@@ -10,24 +10,39 @@ import android.database.sqlite.SQLiteException;
 import android.util.Log;
 import android.widget.TextView;
 
-public class HelperMethodClass {
+public class HelperMethodClassOne {
     private static final String TAG = "myLogs";
     DBHelper dbHelper;                  //позволяет создавать, открывать и обновлять базы данных
     SQLiteDatabase database;            //управление базой данных SQLite
     Cursor cursor;                      //считывает в себя таблицу БД для работы
     ContentValues contentValues;        //используется для добавления новых строк в таблицу
 
-    void onCreateDB(Context context, String nameDB, String SQLZapros) {
+    @SuppressLint("WrongConstant")
+    void onCreateDB(Context context, String nameDB, String nameTableDB, String SQLZapros) {
         Log.d(TAG, "onCreateDB");
-        DBHelper dbHelper = new DBHelper(context, nameDB, null, 1, SQLZapros);
+        //////---Открываем БД для определения версии---/////////
+        database = context.openOrCreateDatabase(nameDB, SQLiteDatabase.CREATE_IF_NECESSARY, null);
+        int version = database.getVersion();
+        database.close();
+        Log.d(TAG, "version = " + version);
+        //////---Открываме БД для считывания данных из таблицы---////////
+        dbHelper = new DBHelper(context, nameDB, null, version, null);
         try {
-            database = dbHelper.getWritableDatabase();
-        } catch (SQLiteException e) {database = dbHelper.getReadableDatabase();}
-        dbHelper.close();   database.close();
+            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
+        } catch (SQLiteException e) { database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
+        //////---Проверяем существование таблицы---////////
+        try {cursor = database.query(nameTableDB, null, null, null, null, null, null); }
+        catch (SQLiteException e) {version++; dbHelper.close(); database.close(); //cursor.close(); его нет
+            dbHelper = new DBHelper(context, nameDB, null, version, SQLZapros);
+            try { database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDBLast"); }
+            catch (SQLiteException e1) {database = dbHelper.getReadableDatabase();
+            Log.d(TAG, "readDBLast"); }
+            Log.d(TAG, "cursor = " + cursor);
+            dbHelper.close();   database.close();}
     }
 
     @SuppressLint("WrongConstant")
-    void onCreateNoteInTable (Context context, String nameDB, String nameTable, String dataRazdel){
+    void onCreateNoteInTable (Context context, String nameDB, String nameTableDB, String dataPunkt){
         Log.d(TAG, "onCreateNoteInTable");
         /////---Открываем БД для определения версии---///////
         database = context.openOrCreateDatabase(nameDB, SQLiteDatabase.CREATE_IF_NECESSARY, null);
@@ -36,18 +51,16 @@ public class HelperMethodClass {
         Log.d(TAG, "version = " + version);
         ////////---Открываем БД для внесения данных в таблицу---////////
         dbHelper = new DBHelper(context, nameDB, null, version, null);
-        try {
-            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
-        } catch (SQLException e) {database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
+        try {   database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB"); }
+        catch (SQLException e) {database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
         ///////---Заносим данные в таблицу---//////////
 //        cursor = database.query(nameTable, null, null, null, null, null, null);
         contentValues = new ContentValues();
-        contentValues.put("_razdel", dataRazdel);
-        Log.d(TAG, "Nomer zapisi = " + database.insert(nameTable, null, contentValues));
+        contentValues.put("_punkt", dataPunkt);
+        Log.d(TAG, "Nomer zapisi = " + database.insert(nameTableDB, null, contentValues));//не просто лог,еще и вставка
 //        cursor.close();
         dbHelper.close();       database.close();
     }
-
     @SuppressLint("WrongConstant")
     String onReadDataFromFieldTable(Context context, String nameDB, String nameTableDB, String nameField) {
         Log.d(TAG, "onREadDataFromFieldTable");
@@ -88,9 +101,8 @@ public class HelperMethodClass {
         Log.d(TAG, "version = " + version);
         ////////---Открываем БД для считывания данных из таблицы---///////
         dbHelper = new DBHelper(context, nameDB, null, version, null);
-        try {
-            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
-        } catch (SQLException e) {database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
+        try { database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB"); }
+        catch (SQLException e) {database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
         ////////---Читаем данные из поля таблицы---/////////
         String str = "";
         cursor = database.query(nameTable, null, null, null, null, null, null);
@@ -113,37 +125,12 @@ public class HelperMethodClass {
         Log.d(TAG, "version = " + version);
         //////---Открываем БД для считывания данных из таблицы---/////////
         dbHelper = new DBHelper(context, nameDB, null, version, null);
-        try {
-            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
-        } catch (SQLException e) { database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
+        try { database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB"); }
+        catch (SQLException e) { database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
         ///////---Удаляем строку из таблицы---//////
         cursor = database.query(nameTable, null, null, null, null, null, null);
         if (cursor.moveToPosition(numberString)) {
             database.delete(nameTable, "_id = " + cursor.getString(0), null);
         }
-    }
-
-    @SuppressLint("WrongConstant")
-    String onReadDataFromStringFieldTable (Context context, String nameDB, String nameTableDB, String nameField, int tekString) {
-        Log.d(TAG, "onReadDataFromStringFieldTable");
-        /////////---Открываем БД для определения версии---//////////
-        database = context.openOrCreateDatabase(nameDB, SQLiteDatabase.CREATE_IF_NECESSARY, null);
-        int version = database.getVersion();
-        database.close();
-        Log.d(TAG, "version = " + version);
-        ////////---Открываем БД для считывания данных из таблицы---///////
-        dbHelper = new DBHelper(context, nameDB, null, version, null);
-        try {
-            database = dbHelper.getWritableDatabase(); Log.d(TAG, "writeDB");
-        } catch (SQLiteException e) {database = dbHelper.getReadableDatabase(); Log.d(TAG, "readDB"); }
-        ////////---Читаем данные из поля таблицы---/////////
-        String str = "";
-        cursor = database.query(nameTableDB, null, null, null, null, null, null);
-        if (cursor.moveToPosition(tekString)) {
-            str = cursor.getString(cursor.getColumnIndex(nameField));
-        } else {str = "- Это все -"; tekString = -1; }
-        Log.d(TAG, "Все записи столбца = " + str);
-        cursor.close();     dbHelper.close();       database.close();
-        return str;
     }
 }
